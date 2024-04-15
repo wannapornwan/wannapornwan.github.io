@@ -1,0 +1,1200 @@
+{
+  "extra": {
+    "groupNodes": {
+      "text": {
+        "links": [
+          [
+            null,
+            0,
+            1,
+            0,
+            44,
+            "STRING"
+          ]
+        ],
+        "nodes": [
+          {
+            "pos": [
+              1765,
+              -50
+            ],
+            "mode": 0,
+            "size": {
+              "0": 400,
+              "1": 200
+            },
+            "type": "Text box",
+            "flags": {},
+            "index": 0,
+            "order": 11,
+            "outputs": [
+              {
+                "name": "STRING",
+                "type": "STRING",
+                "links": null,
+                "shape": 3
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "Text box"
+            },
+            "widgets_values": [
+              ""
+            ]
+          },
+          {
+            "pos": [
+              1734,
+              -149
+            ],
+            "mode": 0,
+            "size": [
+              315,
+              58
+            ],
+            "type": "Text to String",
+            "flags": {},
+            "index": 1,
+            "order": 16,
+            "inputs": [
+              {
+                "link": null,
+                "name": "text",
+                "type": "STRING",
+                "widget": {
+                  "name": "text"
+                }
+              }
+            ],
+            "outputs": [
+              {
+                "name": "STRING",
+                "type": "STRING",
+                "links": null,
+                "shape": 3
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "Text to String"
+            },
+            "widgets_values": [
+              ""
+            ]
+          }
+        ],
+        "external": []
+      }
+    }
+  },
+  "links": [
+    [
+      166,
+      32,
+      1,
+      81,
+      0,
+      "CLIP"
+    ],
+    [
+      167,
+      32,
+      0,
+      39,
+      0,
+      "MODEL"
+    ],
+    [
+      168,
+      30,
+      2,
+      39,
+      4,
+      "VAE"
+    ],
+    [
+      169,
+      32,
+      0,
+      26,
+      0,
+      "MODEL"
+    ],
+    [
+      170,
+      30,
+      2,
+      26,
+      4,
+      "VAE"
+    ],
+    [
+      171,
+      32,
+      1,
+      80,
+      0,
+      "CLIP"
+    ],
+    [
+      184,
+      32,
+      0,
+      26,
+      0,
+      "MODEL"
+    ],
+    [
+      185,
+      30,
+      2,
+      26,
+      4,
+      "VAE"
+    ],
+    [
+      186,
+      32,
+      0,
+      39,
+      0,
+      "MODEL"
+    ],
+    [
+      187,
+      30,
+      2,
+      39,
+      4,
+      "VAE"
+    ],
+    [
+      188,
+      32,
+      1,
+      80,
+      0,
+      "CLIP"
+    ],
+    [
+      189,
+      32,
+      1,
+      81,
+      0,
+      "CLIP"
+    ],
+    [
+      192,
+      32,
+      0,
+      26,
+      0,
+      "MODEL"
+    ],
+    [
+      193,
+      30,
+      2,
+      26,
+      4,
+      "VAE"
+    ],
+    [
+      194,
+      32,
+      1,
+      80,
+      0,
+      "CLIP"
+    ],
+    [
+      195,
+      32,
+      0,
+      39,
+      0,
+      "MODEL"
+    ],
+    [
+      196,
+      30,
+      2,
+      39,
+      4,
+      "VAE"
+    ],
+    [
+      197,
+      32,
+      1,
+      81,
+      0,
+      "CLIP"
+    ],
+    [
+      220,
+      32,
+      0,
+      26,
+      0,
+      "MODEL"
+    ],
+    [
+      221,
+      30,
+      2,
+      26,
+      4,
+      "VAE"
+    ],
+    [
+      222,
+      32,
+      1,
+      81,
+      0,
+      "CLIP"
+    ],
+    [
+      223,
+      32,
+      0,
+      39,
+      0,
+      "MODEL"
+    ],
+    [
+      224,
+      30,
+      2,
+      39,
+      4,
+      "VAE"
+    ],
+    [
+      225,
+      32,
+      1,
+      80,
+      0,
+      "CLIP"
+    ],
+    [
+      226,
+      32,
+      1,
+      81,
+      0,
+      "CLIP"
+    ],
+    [
+      227,
+      32,
+      1,
+      80,
+      0,
+      "CLIP"
+    ],
+    [
+      228,
+      32,
+      0,
+      26,
+      0,
+      "MODEL"
+    ],
+    [
+      229,
+      30,
+      2,
+      26,
+      4,
+      "VAE"
+    ],
+    [
+      230,
+      32,
+      0,
+      39,
+      0,
+      "MODEL"
+    ],
+    [
+      231,
+      30,
+      2,
+      39,
+      4,
+      "VAE"
+    ],
+    [
+      242,
+      32,
+      1,
+      81,
+      0,
+      "CLIP"
+    ],
+    [
+      243,
+      32,
+      1,
+      80,
+      0,
+      "CLIP"
+    ],
+    [
+      244,
+      32,
+      0,
+      26,
+      0,
+      "MODEL"
+    ],
+    [
+      245,
+      30,
+      2,
+      26,
+      4,
+      "VAE"
+    ],
+    [
+      246,
+      32,
+      0,
+      39,
+      0,
+      "MODEL"
+    ],
+    [
+      247,
+      30,
+      2,
+      39,
+      4,
+      "VAE"
+    ],
+    [
+      248,
+      147,
+      0,
+      86,
+      0,
+      "IMAGE"
+    ],
+    [
+      249,
+      147,
+      0,
+      115,
+      0,
+      "IMAGE"
+    ],
+    [
+      250,
+      32,
+      1,
+      81,
+      0,
+      "CLIP"
+    ],
+    [
+      251,
+      32,
+      1,
+      80,
+      0,
+      "CLIP"
+    ],
+    [
+      252,
+      32,
+      0,
+      26,
+      0,
+      "MODEL"
+    ],
+    [
+      253,
+      30,
+      2,
+      26,
+      4,
+      "VAE"
+    ],
+    [
+      254,
+      32,
+      0,
+      39,
+      0,
+      "MODEL"
+    ],
+    [
+      255,
+      30,
+      2,
+      39,
+      4,
+      "VAE"
+    ],
+    [
+      256,
+      147,
+      0,
+      86,
+      0,
+      "IMAGE"
+    ],
+    [
+      257,
+      147,
+      0,
+      115,
+      0,
+      "IMAGE"
+    ],
+    [
+      258,
+      32,
+      1,
+      81,
+      0,
+      "CLIP"
+    ],
+    [
+      259,
+      32,
+      1,
+      80,
+      0,
+      "CLIP"
+    ],
+    [
+      260,
+      32,
+      0,
+      26,
+      0,
+      "MODEL"
+    ],
+    [
+      261,
+      30,
+      2,
+      26,
+      4,
+      "VAE"
+    ],
+    [
+      262,
+      32,
+      0,
+      39,
+      0,
+      "MODEL"
+    ],
+    [
+      263,
+      30,
+      2,
+      39,
+      4,
+      "VAE"
+    ],
+    [
+      264,
+      147,
+      0,
+      86,
+      0,
+      "IMAGE"
+    ],
+    [
+      265,
+      147,
+      0,
+      115,
+      0,
+      "IMAGE"
+    ],
+    [
+      266,
+      32,
+      1,
+      81,
+      0,
+      "CLIP"
+    ],
+    [
+      267,
+      32,
+      1,
+      80,
+      0,
+      "CLIP"
+    ],
+    [
+      268,
+      32,
+      0,
+      26,
+      0,
+      "MODEL"
+    ],
+    [
+      269,
+      30,
+      2,
+      26,
+      4,
+      "VAE"
+    ],
+    [
+      270,
+      32,
+      0,
+      39,
+      0,
+      "MODEL"
+    ],
+    [
+      271,
+      30,
+      2,
+      39,
+      4,
+      "VAE"
+    ],
+    [
+      272,
+      147,
+      0,
+      86,
+      0,
+      "IMAGE"
+    ],
+    [
+      273,
+      147,
+      0,
+      115,
+      0,
+      "IMAGE"
+    ],
+    [
+      274,
+      32,
+      1,
+      81,
+      0,
+      "CLIP"
+    ],
+    [
+      275,
+      32,
+      1,
+      80,
+      0,
+      "CLIP"
+    ],
+    [
+      276,
+      32,
+      0,
+      26,
+      0,
+      "MODEL"
+    ],
+    [
+      277,
+      30,
+      2,
+      26,
+      4,
+      "VAE"
+    ],
+    [
+      278,
+      32,
+      0,
+      39,
+      0,
+      "MODEL"
+    ],
+    [
+      279,
+      30,
+      2,
+      39,
+      4,
+      "VAE"
+    ],
+    [
+      280,
+      147,
+      0,
+      86,
+      0,
+      "IMAGE"
+    ],
+    [
+      281,
+      147,
+      0,
+      115,
+      0,
+      "IMAGE"
+    ],
+    [
+      314,
+      160,
+      0,
+      163,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      317,
+      180,
+      0,
+      163,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      330,
+      192,
+      0,
+      163,
+      3,
+      "LATENT"
+    ],
+    [
+      331,
+      163,
+      0,
+      193,
+      0,
+      "LATENT"
+    ],
+    [
+      332,
+      30,
+      2,
+      193,
+      1,
+      "VAE"
+    ],
+    [
+      354,
+      193,
+      0,
+      207,
+      0,
+      "IMAGE"
+    ],
+    [
+      355,
+      30,
+      0,
+      210,
+      0,
+      "MODEL"
+    ],
+    [
+      356,
+      30,
+      1,
+      210,
+      1,
+      "CLIP"
+    ],
+    [
+      383,
+      210,
+      0,
+      235,
+      0,
+      "MODEL"
+    ],
+    [
+      384,
+      210,
+      1,
+      235,
+      1,
+      "CLIP"
+    ],
+    [
+      385,
+      235,
+      1,
+      180,
+      0,
+      "CLIP"
+    ],
+    [
+      386,
+      235,
+      1,
+      160,
+      0,
+      "CLIP"
+    ],
+    [
+      387,
+      235,
+      0,
+      163,
+      0,
+      "MODEL"
+    ]
+  ],
+  "nodes": [
+    {
+      "id": 160,
+      "pos": [
+        726,
+        566
+      ],
+      "mode": 0,
+      "size": {
+        "0": 318.757568359375,
+        "1": 156.31080627441406
+      },
+      "type": "CLIPTextEncode",
+      "flags": {},
+      "order": 5,
+      "inputs": [
+        {
+          "link": 386,
+          "name": "clip",
+          "type": "CLIP",
+          "label": "CLIP",
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "label": "条件",
+          "links": [
+            314
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        " ugly, deformed, noisy, blurry, distorted, out of focus, bad anatomy, extra limbs, poorly drawn face, poorly drawn hands, missing fingers"
+      ]
+    },
+    {
+      "id": 192,
+      "pos": [
+        724,
+        771
+      ],
+      "mode": 0,
+      "size": {
+        "0": 321.757568359375,
+        "1": 106
+      },
+      "type": "EmptyLatentImage",
+      "flags": {},
+      "order": 0,
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "label": "Latent",
+          "links": [
+            330
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        1536,
+        1024,
+        2
+      ]
+    },
+    {
+      "id": 163,
+      "pos": [
+        1113,
+        349
+      ],
+      "mode": 0,
+      "size": {
+        "0": 315,
+        "1": 334
+      },
+      "type": "KSamplerAdvanced",
+      "flags": {},
+      "order": 6,
+      "inputs": [
+        {
+          "link": 387,
+          "name": "model",
+          "type": "MODEL",
+          "label": "模型"
+        },
+        {
+          "link": 317,
+          "name": "positive",
+          "type": "CONDITIONING",
+          "label": "正面条件"
+        },
+        {
+          "link": 314,
+          "name": "negative",
+          "type": "CONDITIONING",
+          "label": "负面条件"
+        },
+        {
+          "link": 330,
+          "name": "latent_image",
+          "type": "LATENT",
+          "label": "Latent",
+          "slot_index": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "label": "Latent",
+          "links": [
+            331
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced"
+      },
+      "widgets_values": [
+        "enable",
+        1097433247395807,
+        "randomize",
+        30,
+        6,
+        "euler_ancestral",
+        "normal",
+        0,
+        10000,
+        "disable"
+      ]
+    },
+    {
+      "id": 180,
+      "pos": [
+        723,
+        351
+      ],
+      "mode": 0,
+      "size": {
+        "0": 328.2225646972656,
+        "1": 173.8264923095703
+      },
+      "type": "CLIPTextEncode",
+      "flags": {},
+      "order": 4,
+      "inputs": [
+        {
+          "link": 385,
+          "name": "clip",
+          "type": "CLIP",
+          "label": "CLIP",
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "label": "条件",
+          "links": [
+            317
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        " flower, outdoors, day, water, tree, no humans, window, grass, plant, building, scenery, stairs, yellow flower, fence, door, potted plant, bush, house, orange flower, pond, garden, chimney, HD, best quality, 16k"
+      ]
+    },
+    {
+      "id": 210,
+      "pos": [
+        227,
+        342
+      ],
+      "mode": 0,
+      "size": {
+        "0": 381.757568359375,
+        "1": 150
+      },
+      "type": "LoraLoader",
+      "flags": {},
+      "order": 2,
+      "inputs": [
+        {
+          "link": 355,
+          "name": "model",
+          "type": "MODEL",
+          "label": "模型"
+        },
+        {
+          "link": 356,
+          "name": "clip",
+          "type": "CLIP",
+          "label": "CLIP",
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "label": "模型",
+          "links": [
+            383
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "label": "CLIP",
+          "links": [
+            384
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "710797996377383203",
+        "蔚蓝Blue2D游戏地图场景SDXL -  SDXL",
+        0.6,
+        1
+      ]
+    },
+    {
+      "id": 235,
+      "pos": [
+        222,
+        550
+      ],
+      "mode": 0,
+      "size": [
+        395.52197265625,
+        154.56097297668464
+      ],
+      "type": "LoraLoader",
+      "flags": {},
+      "order": 3,
+      "inputs": [
+        {
+          "link": 383,
+          "name": "model",
+          "type": "MODEL",
+          "label": "模型"
+        },
+        {
+          "link": 384,
+          "name": "clip",
+          "type": "CLIP",
+          "label": "CLIP"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "label": "模型",
+          "links": [
+            387
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "label": "CLIP",
+          "links": [
+            385,
+            386
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "681878190571933404",
+        "蔚蓝Blue（XL原神torino画风） - 2.0精简版",
+        0.6,
+        1
+      ]
+    },
+    {
+      "id": 30,
+      "pos": [
+        -188,
+        349
+      ],
+      "mode": 0,
+      "size": {
+        "0": 362.757568359375,
+        "1": 130.31080627441406
+      },
+      "type": "CheckpointLoaderSimple",
+      "color": "#323",
+      "flags": {},
+      "order": 1,
+      "bgcolor": "#535",
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "label": "模型",
+          "links": [
+            355
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "label": "CLIP",
+          "links": [
+            356
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "label": "VAE",
+          "links": [
+            332
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "712312668134023199",
+        "蔚蓝BlueSDXL_GHDT -  RH"
+      ]
+    },
+    {
+      "id": 193,
+      "pos": [
+        1475,
+        351
+      ],
+      "mode": 0,
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "type": "VAEDecode",
+      "flags": {},
+      "order": 7,
+      "inputs": [
+        {
+          "link": 331,
+          "name": "samples",
+          "type": "LATENT",
+          "label": "Latent"
+        },
+        {
+          "link": 332,
+          "name": "vae",
+          "type": "VAE",
+          "label": "VAE",
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "label": "图像",
+          "links": [
+            354
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 207,
+      "pos": [
+        1727,
+        352
+      ],
+      "mode": 0,
+      "size": {
+        "0": 312.757568359375,
+        "1": 270
+      },
+      "type": "SaveImage",
+      "flags": {},
+      "order": 8,
+      "inputs": [
+        {
+          "link": 354,
+          "name": "images",
+          "type": "IMAGE",
+          "label": "图像",
+          "slot_index": 0
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "TensorArt"
+      ]
+    }
+  ],
+  "config": {},
+  "groups": [],
+  "version": 0.4,
+  "last_link_id": 387,
+  "last_node_id": 235
+}

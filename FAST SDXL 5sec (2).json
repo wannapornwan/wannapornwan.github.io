@@ -1,0 +1,467 @@
+{
+  "extra": {},
+  "links": [
+    [
+      3,
+      1,
+      0,
+      5,
+      0,
+      "MODEL"
+    ],
+    [
+      4,
+      1,
+      1,
+      5,
+      1,
+      "CLIP"
+    ],
+    [
+      6,
+      2,
+      0,
+      6,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      7,
+      3,
+      0,
+      6,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      8,
+      4,
+      0,
+      6,
+      3,
+      "LATENT"
+    ],
+    [
+      9,
+      5,
+      0,
+      6,
+      0,
+      "MODEL"
+    ],
+    [
+      10,
+      5,
+      1,
+      2,
+      0,
+      "CLIP"
+    ],
+    [
+      11,
+      5,
+      1,
+      3,
+      0,
+      "CLIP"
+    ],
+    [
+      12,
+      6,
+      0,
+      11,
+      0,
+      "LATENT"
+    ],
+    [
+      13,
+      1,
+      2,
+      11,
+      1,
+      "VAE"
+    ],
+    [
+      16,
+      11,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "nodes": [
+    {
+      "id": 1,
+      "pos": [
+        65,
+        150
+      ],
+      "mode": 0,
+      "size": {
+        "0": 210,
+        "1": 122
+      },
+      "type": "CheckpointLoaderSimple",
+      "flags": {},
+      "order": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "label": "MODEL",
+          "links": [
+            3
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "label": "CLIP",
+          "links": [
+            4
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "label": "VAE",
+          "links": [
+            13
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "702813703965453448",
+        "ToxicEtheRealXL - v1"
+      ]
+    },
+    {
+      "id": 5,
+      "pos": [
+        63,
+        329
+      ],
+      "mode": 0,
+      "size": {
+        "0": 210,
+        "1": 150
+      },
+      "type": "LoraLoader",
+      "flags": {},
+      "order": 2,
+      "inputs": [
+        {
+          "link": 3,
+          "name": "model",
+          "type": "MODEL",
+          "label": "model"
+        },
+        {
+          "link": 4,
+          "name": "clip",
+          "type": "CLIP",
+          "label": "clip"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "label": "MODEL",
+          "links": [
+            9
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "label": "CLIP",
+          "links": [
+            10,
+            11
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "648321710124311246",
+        "Add More Detail XL - Enhances & Fine Tunes - V1.0",
+        0.6,
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "pos": [
+        360,
+        431
+      ],
+      "mode": 0,
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "type": "CLIPTextEncode",
+      "flags": {},
+      "order": 4,
+      "inputs": [
+        {
+          "link": 11,
+          "name": "clip",
+          "type": "CLIP",
+          "label": "clip"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "label": "CONDITIONING",
+          "links": [
+            7
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "bad proportions, low resolution, bad, ugly, terrible, female, girl, painting, 3d, render, comic, anime, manga, unrealistic, flat, FastNegativeV2, watermark, signature, worst quality, low quality, normal quality, lowres, simple background, inaccurate limb, extra fingers, fewer fingers, missing fingers, extra arms, (extra legs:1.3), inaccurate eyes, bad composition, bad anatomy, error, extra digit, fewer digits, cropped, low res, worst quality, low quality, normal quality, jpeg artifacts, extra digit, fewer digits, trademark, watermark, artist's name, username, signature, text, words, human, american flag, muscular\n"
+      ]
+    },
+    {
+      "id": 4,
+      "pos": [
+        367,
+        689
+      ],
+      "mode": 0,
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "type": "EmptyLatentImage",
+      "flags": {},
+      "order": 1,
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "label": "LATENT",
+          "links": [
+            8
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "pos": [
+        795,
+        71
+      ],
+      "mode": 0,
+      "size": {
+        "0": 315,
+        "1": 262
+      },
+      "type": "KSampler",
+      "flags": {},
+      "order": 5,
+      "inputs": [
+        {
+          "link": 9,
+          "name": "model",
+          "type": "MODEL",
+          "label": "model"
+        },
+        {
+          "link": 6,
+          "name": "positive",
+          "type": "CONDITIONING",
+          "label": "positive"
+        },
+        {
+          "link": 7,
+          "name": "negative",
+          "type": "CONDITIONING",
+          "label": "negative"
+        },
+        {
+          "link": 8,
+          "name": "latent_image",
+          "type": "LATENT",
+          "label": "latent_image"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "label": "LATENT",
+          "links": [
+            12
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        1087557230920168,
+        "randomize",
+        35,
+        7,
+        "euler",
+        "karras",
+        1
+      ]
+    },
+    {
+      "id": 2,
+      "pos": [
+        362,
+        67
+      ],
+      "mode": 0,
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "type": "CLIPTextEncode",
+      "flags": {},
+      "order": 3,
+      "inputs": [
+        {
+          "link": 10,
+          "name": "clip",
+          "type": "CLIP",
+          "label": "clip"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "label": "CONDITIONING",
+          "links": [
+            6
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "(score_9, score_8_up:1.1), score_7_up, 1girl, solo, expressive, rose petals, dynamic, blonde hair, long hair, green eyes, pale skin girl, pale skin, freckles, turtleneck, bare shoulders, blush, red rose in hair, looking_longingly, seductive, sexy_woman, black background, looking away, sad, mandala, chaotic flowers, teary eyes, rose petals <lora:sdxl\\Concept Art Twilight Style SDXL_LoRA_Pony Diffusion V6 XL:0.8> <lora:sdxl\\Expressive_H-000001:0.8>\n"
+      ]
+    },
+    {
+      "id": 13,
+      "pos": [
+        1138,
+        73
+      ],
+      "mode": 0,
+      "size": [
+        491.4958306489279,
+        621.5692833399205
+      ],
+      "type": "PreviewImage",
+      "flags": {},
+      "order": 7,
+      "inputs": [
+        {
+          "link": 16,
+          "name": "images",
+          "type": "IMAGE",
+          "label": "images"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 11,
+      "pos": [
+        802,
+        384
+      ],
+      "mode": 0,
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "type": "VAEDecode",
+      "flags": {},
+      "order": 6,
+      "inputs": [
+        {
+          "link": 12,
+          "name": "samples",
+          "type": "LATENT",
+          "label": "samples"
+        },
+        {
+          "link": 13,
+          "name": "vae",
+          "type": "VAE",
+          "label": "vae"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "label": "IMAGE",
+          "links": [
+            16
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    }
+  ],
+  "config": {},
+  "groups": [],
+  "version": 0.4,
+  "last_link_id": 17,
+  "last_node_id": 14
+}
