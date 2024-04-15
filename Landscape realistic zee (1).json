@@ -1,0 +1,1537 @@
+{
+  "extra": {},
+  "links": [
+    [
+      2,
+      5,
+      0,
+      3,
+      3,
+      "LATENT"
+    ],
+    [
+      6,
+      7,
+      0,
+      3,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      7,
+      3,
+      0,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      36,
+      20,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      40,
+      15,
+      0,
+      10,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      41,
+      3,
+      0,
+      22,
+      0,
+      "LATENT"
+    ],
+    [
+      42,
+      22,
+      0,
+      24,
+      3,
+      "LATENT"
+    ],
+    [
+      46,
+      26,
+      0,
+      24,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      47,
+      27,
+      0,
+      24,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      50,
+      24,
+      0,
+      31,
+      0,
+      "LATENT"
+    ],
+    [
+      51,
+      20,
+      0,
+      31,
+      1,
+      "VAE"
+    ],
+    [
+      54,
+      19,
+      0,
+      3,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      57,
+      11,
+      0,
+      12,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      58,
+      12,
+      0,
+      19,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      61,
+      34,
+      0,
+      35,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      62,
+      18,
+      0,
+      35,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      63,
+      35,
+      0,
+      12,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      87,
+      31,
+      0,
+      32,
+      0,
+      "IMAGE"
+    ],
+    [
+      89,
+      14,
+      0,
+      15,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      90,
+      17,
+      0,
+      18,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      91,
+      13,
+      0,
+      11,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      92,
+      33,
+      0,
+      34,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      93,
+      6,
+      0,
+      10,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      94,
+      10,
+      0,
+      19,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      95,
+      45,
+      0,
+      24,
+      0,
+      "MODEL"
+    ],
+    [
+      104,
+      44,
+      0,
+      3,
+      0,
+      "MODEL"
+    ],
+    [
+      105,
+      46,
+      0,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      106,
+      46,
+      0,
+      7,
+      0,
+      "CLIP"
+    ],
+    [
+      107,
+      46,
+      0,
+      33,
+      0,
+      "CLIP"
+    ],
+    [
+      108,
+      46,
+      0,
+      17,
+      0,
+      "CLIP"
+    ],
+    [
+      109,
+      46,
+      0,
+      13,
+      0,
+      "CLIP"
+    ],
+    [
+      110,
+      46,
+      0,
+      14,
+      0,
+      "CLIP"
+    ],
+    [
+      111,
+      44,
+      1,
+      46,
+      0,
+      "CLIP"
+    ],
+    [
+      112,
+      45,
+      1,
+      47,
+      0,
+      "CLIP"
+    ],
+    [
+      113,
+      47,
+      0,
+      26,
+      0,
+      "CLIP"
+    ],
+    [
+      114,
+      47,
+      0,
+      27,
+      0,
+      "CLIP"
+    ]
+  ],
+  "nodes": [
+    {
+      "id": 8,
+      "pos": [
+        1320,
+        302
+      ],
+      "mode": 0,
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "type": "VAEDecode",
+      "flags": {},
+      "order": 24,
+      "inputs": [
+        {
+          "link": 7,
+          "name": "samples",
+          "type": "LATENT",
+          "label": "samples"
+        },
+        {
+          "link": 36,
+          "name": "vae",
+          "type": "VAE",
+          "label": "vae"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "label": "IMAGE",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 7,
+      "pos": [
+        175,
+        496
+      ],
+      "mode": 0,
+      "size": {
+        "0": 425.2780151367187,
+        "1": 180.6060791015625
+      },
+      "type": "CLIPTextEncode",
+      "flags": {},
+      "order": 10,
+      "inputs": [
+        {
+          "link": 106,
+          "name": "clip",
+          "type": "CLIP",
+          "label": "clip"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "label": "CONDITIONING",
+          "links": [
+            6
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "(hands), text, error, cropped, (worst quality:1.2), (low quality:1.2), normal quality, (jpeg artifacts:1.3), signature, watermark, username, blurry, artist name, monochrome, sketch, censorship, censor, (copyright:1.2), extra legs, (forehead mark) (depth of field) (emotionless) (penis) (pumpkin)"
+      ]
+    },
+    {
+      "id": 27,
+      "pos": [
+        1787,
+        -317
+      ],
+      "mode": 0,
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "type": "CLIPTextEncode",
+      "flags": {},
+      "order": 8,
+      "inputs": [
+        {
+          "link": 114,
+          "name": "clip",
+          "type": "CLIP",
+          "label": "clip"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "label": "CONDITIONING",
+          "links": [
+            47
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "(hands), text, error, cropped, (worst quality:1.2), (low quality:1.2), normal quality, (jpeg artifacts:1.3), signature, watermark, username, blurry, artist name, monochrome, sketch, censorship, censor, (copyright:1.2), extra legs, (forehead mark) (depth of field) (emotionless) (penis) (pumpkin)"
+      ]
+    },
+    {
+      "id": 47,
+      "pos": [
+        1407,
+        -402
+      ],
+      "mode": 0,
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "type": "CLIPSetLastLayer",
+      "flags": {},
+      "order": 5,
+      "inputs": [
+        {
+          "link": 112,
+          "name": "clip",
+          "type": "CLIP",
+          "label": "clip"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "label": "CLIP",
+          "links": [
+            113,
+            114
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPSetLastLayer"
+      },
+      "widgets_values": [
+        -2
+      ]
+    },
+    {
+      "id": 19,
+      "pos": [
+        1213,
+        -162
+      ],
+      "mode": 0,
+      "size": {
+        "0": 342.5999755859375,
+        "1": 46
+      },
+      "type": "ConditioningCombine",
+      "flags": {},
+      "order": 22,
+      "inputs": [
+        {
+          "link": 58,
+          "name": "conditioning_1",
+          "type": "CONDITIONING",
+          "label": "conditioning_1"
+        },
+        {
+          "link": 94,
+          "name": "conditioning_2",
+          "type": "CONDITIONING",
+          "label": "conditioning_2"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "label": "CONDITIONING",
+          "links": [
+            54
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningCombine"
+      }
+    },
+    {
+      "id": 35,
+      "pos": [
+        858,
+        -705
+      ],
+      "mode": 0,
+      "size": {
+        "0": 342.5999755859375,
+        "1": 46
+      },
+      "type": "ConditioningCombine",
+      "flags": {
+        "collapsed": false
+      },
+      "order": 19,
+      "inputs": [
+        {
+          "link": 61,
+          "name": "conditioning_1",
+          "type": "CONDITIONING",
+          "label": "conditioning_1"
+        },
+        {
+          "link": 62,
+          "name": "conditioning_2",
+          "type": "CONDITIONING",
+          "label": "conditioning_2"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "label": "CONDITIONING",
+          "links": [
+            63
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningCombine"
+      }
+    },
+    {
+      "id": 12,
+      "pos": [
+        850,
+        -263
+      ],
+      "mode": 0,
+      "size": {
+        "0": 342.5999755859375,
+        "1": 46
+      },
+      "type": "ConditioningCombine",
+      "flags": {
+        "collapsed": false
+      },
+      "order": 21,
+      "inputs": [
+        {
+          "link": 63,
+          "name": "conditioning_1",
+          "type": "CONDITIONING",
+          "label": "conditioning_1"
+        },
+        {
+          "link": 57,
+          "name": "conditioning_2",
+          "type": "CONDITIONING",
+          "label": "conditioning_2"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "label": "CONDITIONING",
+          "links": [
+            58
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningCombine"
+      }
+    },
+    {
+      "id": 10,
+      "pos": [
+        830,
+        -149
+      ],
+      "mode": 0,
+      "size": {
+        "0": 342.5999755859375,
+        "1": 46
+      },
+      "type": "ConditioningCombine",
+      "flags": {},
+      "order": 20,
+      "inputs": [
+        {
+          "link": 40,
+          "name": "conditioning_1",
+          "type": "CONDITIONING",
+          "label": "conditioning_1"
+        },
+        {
+          "link": 93,
+          "name": "conditioning_2",
+          "type": "CONDITIONING",
+          "label": "conditioning_2"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "label": "CONDITIONING",
+          "links": [
+            94
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningCombine"
+      }
+    },
+    {
+      "id": 24,
+      "pos": [
+        2219,
+        -402
+      ],
+      "mode": 0,
+      "size": {
+        "0": 315,
+        "1": 262
+      },
+      "type": "KSampler",
+      "flags": {},
+      "order": 26,
+      "inputs": [
+        {
+          "link": 95,
+          "name": "model",
+          "type": "MODEL",
+          "label": "model"
+        },
+        {
+          "link": 46,
+          "name": "positive",
+          "type": "CONDITIONING",
+          "label": "positive"
+        },
+        {
+          "link": 47,
+          "name": "negative",
+          "type": "CONDITIONING",
+          "label": "negative"
+        },
+        {
+          "link": 42,
+          "name": "latent_image",
+          "type": "LATENT",
+          "label": "latent_image"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "label": "LATENT",
+          "links": [
+            50
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        1063950553079993,
+        "randomize",
+        14,
+        7,
+        "dpmpp_2m",
+        "simple",
+        0.5
+      ]
+    },
+    {
+      "id": 5,
+      "pos": [
+        695,
+        531
+      ],
+      "mode": 0,
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "type": "EmptyLatentImage",
+      "flags": {
+        "collapsed": false
+      },
+      "order": 0,
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "label": "LATENT",
+          "links": [
+            2
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        1
+      ]
+    },
+    {
+      "id": 34,
+      "pos": [
+        476,
+        -932
+      ],
+      "mode": 0,
+      "size": {
+        "0": 312,
+        "1": 154
+      },
+      "type": "ConditioningSetArea",
+      "flags": {},
+      "order": 15,
+      "inputs": [
+        {
+          "link": 92,
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "label": "conditioning",
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "label": "CONDITIONING",
+          "links": [
+            61
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningSetArea"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": 18,
+      "pos": [
+        482,
+        -709
+      ],
+      "mode": 0,
+      "size": {
+        "0": 312,
+        "1": 154
+      },
+      "type": "ConditioningSetArea",
+      "flags": {},
+      "order": 16,
+      "inputs": [
+        {
+          "link": 90,
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "label": "conditioning"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "label": "CONDITIONING",
+          "links": [
+            62
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningSetArea"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        0,
+        360,
+        1
+      ]
+    },
+    {
+      "id": 11,
+      "pos": [
+        479,
+        -454
+      ],
+      "mode": 0,
+      "size": {
+        "0": 314,
+        "1": 154
+      },
+      "type": "ConditioningSetArea",
+      "flags": {},
+      "order": 17,
+      "inputs": [
+        {
+          "link": 91,
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "label": "conditioning",
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "label": "CONDITIONING",
+          "links": [
+            57
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningSetArea"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        0,
+        544,
+        1
+      ]
+    },
+    {
+      "id": 15,
+      "pos": [
+        470,
+        -233
+      ],
+      "mode": 0,
+      "size": {
+        "0": 299,
+        "1": 154
+      },
+      "type": "ConditioningSetArea",
+      "flags": {},
+      "order": 18,
+      "inputs": [
+        {
+          "link": 89,
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "label": "conditioning"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "label": "CONDITIONING",
+          "links": [
+            40
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningSetArea"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        0,
+        704,
+        1.5000000000000004
+      ]
+    },
+    {
+      "id": 31,
+      "pos": [
+        2584,
+        -62
+      ],
+      "mode": 0,
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "type": "VAEDecode",
+      "flags": {},
+      "order": 27,
+      "inputs": [
+        {
+          "link": 50,
+          "name": "samples",
+          "type": "LATENT",
+          "label": "samples"
+        },
+        {
+          "link": 51,
+          "name": "vae",
+          "type": "VAE",
+          "label": "vae"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "label": "IMAGE",
+          "links": [
+            87
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 14,
+      "pos": [
+        -78,
+        -226
+      ],
+      "mode": 0,
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "type": "CLIPTextEncode",
+      "flags": {},
+      "order": 14,
+      "inputs": [
+        {
+          "link": 110,
+          "name": "clip",
+          "type": "CLIP",
+          "label": "clip"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "label": "CONDITIONING",
+          "links": [
+            89
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "(best quality) (night:1.3) (darkness) sky (black) (stars:1.2) (galaxy:1.2) (space) (universe)"
+      ]
+    },
+    {
+      "id": 13,
+      "pos": [
+        -85,
+        -474
+      ],
+      "mode": 0,
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "type": "CLIPTextEncode",
+      "flags": {},
+      "order": 13,
+      "inputs": [
+        {
+          "link": 109,
+          "name": "clip",
+          "type": "CLIP",
+          "label": "clip"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "label": "CONDITIONING",
+          "links": [
+            91
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "(best quality) (evening:1.2) (sky:1.2) (clouds) (colorful) (HDR:1.2) (sunset:1.3)\n"
+      ]
+    },
+    {
+      "id": 17,
+      "pos": [
+        -84,
+        -720
+      ],
+      "mode": 0,
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "type": "CLIPTextEncode",
+      "flags": {},
+      "order": 12,
+      "inputs": [
+        {
+          "link": 108,
+          "name": "clip",
+          "type": "CLIP",
+          "label": "clip"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "label": "CONDITIONING",
+          "links": [
+            90
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "(best quality) (daytime:1.2) sky (blue)\n"
+      ]
+    },
+    {
+      "id": 33,
+      "pos": [
+        -93,
+        -972
+      ],
+      "mode": 0,
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "type": "CLIPTextEncode",
+      "flags": {},
+      "order": 11,
+      "inputs": [
+        {
+          "link": 107,
+          "name": "clip",
+          "type": "CLIP",
+          "label": "clip"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "label": "CONDITIONING",
+          "links": [
+            92
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "(masterpiece) (best quality) morning sky\n\n"
+      ]
+    },
+    {
+      "id": 22,
+      "pos": [
+        1392,
+        42
+      ],
+      "mode": 0,
+      "size": {
+        "0": 315,
+        "1": 130
+      },
+      "type": "LatentUpscale",
+      "flags": {},
+      "order": 25,
+      "inputs": [
+        {
+          "link": 41,
+          "name": "samples",
+          "type": "LATENT",
+          "label": "samples"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "label": "LATENT",
+          "links": [
+            42
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LatentUpscale"
+      },
+      "widgets_values": [
+        "nearest-exact",
+        1920,
+        1080,
+        "disabled"
+      ]
+    },
+    {
+      "id": 3,
+      "pos": [
+        897,
+        113
+      ],
+      "mode": 0,
+      "size": {
+        "0": 315,
+        "1": 262
+      },
+      "type": "KSampler",
+      "flags": {},
+      "order": 23,
+      "inputs": [
+        {
+          "link": 104,
+          "name": "model",
+          "type": "MODEL",
+          "label": "model"
+        },
+        {
+          "link": 54,
+          "name": "positive",
+          "type": "CONDITIONING",
+          "label": "positive"
+        },
+        {
+          "link": 6,
+          "name": "negative",
+          "type": "CONDITIONING",
+          "label": "negative"
+        },
+        {
+          "link": 2,
+          "name": "latent_image",
+          "type": "LATENT",
+          "label": "latent_image"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "label": "LATENT",
+          "links": [
+            7,
+            41
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        813102977323947,
+        "randomize",
+        13,
+        8.5,
+        "dpmpp_sde",
+        "normal",
+        1
+      ]
+    },
+    {
+      "id": 46,
+      "pos": [
+        -307,
+        236
+      ],
+      "mode": 0,
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "type": "CLIPSetLastLayer",
+      "flags": {},
+      "order": 6,
+      "inputs": [
+        {
+          "link": 111,
+          "name": "clip",
+          "type": "CLIP",
+          "label": "clip",
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "label": "CLIP",
+          "links": [
+            105,
+            106,
+            107,
+            108,
+            109,
+            110
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPSetLastLayer"
+      },
+      "widgets_values": [
+        -2
+      ]
+    },
+    {
+      "id": 45,
+      "pos": [
+        1300,
+        -695
+      ],
+      "mode": 0,
+      "size": {
+        "0": 315,
+        "1": 122
+      },
+      "type": "CheckpointLoaderSimple",
+      "flags": {},
+      "order": 1,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "label": "MODEL",
+          "links": [
+            95
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "label": "CLIP",
+          "links": [
+            112
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "label": "VAE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "666150205269367046",
+        "Extra Realistic XL - v1"
+      ]
+    },
+    {
+      "id": 44,
+      "pos": [
+        -642,
+        404
+      ],
+      "mode": 0,
+      "size": {
+        "0": 315,
+        "1": 122
+      },
+      "type": "CheckpointLoaderSimple",
+      "flags": {},
+      "order": 2,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "label": "MODEL",
+          "links": [
+            104
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "label": "CLIP",
+          "links": [
+            111
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "label": "VAE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "666150205269367046",
+        "Extra Realistic XL - v1"
+      ]
+    },
+    {
+      "id": 50,
+      "pos": [
+        1635,
+        277
+      ],
+      "mode": 0,
+      "size": {
+        "0": 210,
+        "1": 246
+      },
+      "type": "PreviewImage",
+      "flags": {},
+      "order": 3,
+      "inputs": [
+        {
+          "link": null,
+          "name": "images",
+          "type": "IMAGE",
+          "label": "images"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 20,
+      "pos": [
+        1185,
+        432
+      ],
+      "mode": 0,
+      "size": {
+        "0": 394.7999877929687,
+        "1": 58
+      },
+      "type": "VAELoader",
+      "flags": {},
+      "order": 4,
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "label": "VAE",
+          "links": [
+            36,
+            51
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "sdxl-vae-fp16-fix.safetensors"
+      ]
+    },
+    {
+      "id": 32,
+      "pos": [
+        2825,
+        -62
+      ],
+      "mode": 0,
+      "size": {
+        "0": 315,
+        "1": 270
+      },
+      "type": "SaveImage",
+      "flags": {},
+      "order": 28,
+      "inputs": [
+        {
+          "link": 87,
+          "name": "images",
+          "type": "IMAGE",
+          "label": "images"
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "TensorArt"
+      ]
+    },
+    {
+      "id": 6,
+      "pos": [
+        172,
+        255
+      ],
+      "mode": 0,
+      "size": {
+        "0": 422.8450317382813,
+        "1": 164.31304931640625
+      },
+      "type": "CLIPTextEncode",
+      "flags": {
+        "collapsed": false
+      },
+      "order": 9,
+      "inputs": [
+        {
+          "link": 105,
+          "name": "clip",
+          "type": "CLIP",
+          "label": "clip"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "label": "CONDITIONING",
+          "links": [
+            93
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "(masterpiece) (best quality) beautiful landscape breathtaking amazing view nature photograph forest mountains ocean (sky) park scenery winter"
+      ]
+    },
+    {
+      "id": 26,
+      "pos": [
+        1781,
+        -571
+      ],
+      "mode": 0,
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "type": "CLIPTextEncode",
+      "flags": {},
+      "order": 7,
+      "inputs": [
+        {
+          "link": 113,
+          "name": "clip",
+          "type": "CLIP",
+          "label": "clip"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "label": "CONDITIONING",
+          "links": [
+            46
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "(best quality) beautiful (HDR:1.2) (realistic:1.2) (landscape:1.2) breathtaking amazing view nature scenery photograph forest mountains ocean daytime night evening morning winter (sky:1.1)\n"
+      ]
+    }
+  ],
+  "config": {},
+  "groups": [],
+  "version": 0.4,
+  "last_link_id": 118,
+  "last_node_id": 50
+}
